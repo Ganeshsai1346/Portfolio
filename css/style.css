@@ -63,7 +63,7 @@ body {
   font-display: swap;
 }
 @font-face {
-  font-family: "Jetbrains";
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   src: local("Jetbrains"),
@@ -407,7 +407,6 @@ h4 {
 }
 
 .card-content .project-info .stack {
-  text-transform: uppercase;
   padding-bottom: 0.5rem;
   color: var(--primary-color);
 }
