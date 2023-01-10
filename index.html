@@ -25,7 +25,16 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/global.css" />
     <!-- Script -->
-
+    <script src="index.js" async></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("INN_4CRohGZoDiuXY");
+      })();
+    </script>
     <!-- Favicon -->
     <link
       rel="apple-touch-icon"
@@ -580,12 +589,7 @@
           </div>
           <div class="form-container">
             <div class="form-page">
-              <form
-                action="https://formspree.io/f/mzbqbwpv"
-                method="POST"
-                data-netlify="true"
-                class="form"
-              >
+              <form data-netlify="true" class="form">
                 <div class="form-group group-bg">
                   <label for="Name">Name</label>
                   <input
@@ -599,7 +603,7 @@
                   <label for="Email">Email</label>
                   <input
                     type="email"
-                    id="email"
+                    id="Email"
                     placeholder="Enter Email Address"
                     required
                   />
@@ -613,7 +617,7 @@
                   ></textarea>
                 </div>
                 <div class="form-group">
-                  <button type="submit" class="btn">Send</button>
+                  <button onclick="SendMail()" class="btn">Send</button>
                 </div>
               </form>
             </div>
@@ -641,71 +645,5 @@
         </div>
       </div>
     </footer>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      // ?Hamburger menu
-
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-menu");
-
-      hamburger.addEventListener("click", mobileMenu);
-
-      function mobileMenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-      }
-
-      // Close navbar when link is clicked
-      const navLink = document.querySelectorAll(".nav-link");
-
-      navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
-      function closeMenu() {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-      }
-
-      // Event Listeners: Handling toggle event
-
-      const toggleSwitch = document.querySelector(
-        '.theme-switch input[type="checkbox"]'
-      );
-
-      function switchTheme(e) {
-        if (e.target.checked) {
-          document.documentElement.setAttribute("data-theme", "dark");
-        } else {
-          document.documentElement.setAttribute("data-theme", "light");
-        }
-      }
-
-      toggleSwitch.addEventListener("change", switchTheme, false);
-
-      //  Store color theme for future visits
-
-      function switchTheme(e) {
-        if (e.target.checked) {
-          document.documentElement.setAttribute("data-theme", "dark");
-          localStorage.setItem("theme", "dark"); //add this
-        } else {
-          document.documentElement.setAttribute("data-theme", "light");
-          localStorage.setItem("theme", "light"); //add this
-        }
-      }
-
-      // Save user preference on load
-
-      const currentTheme = localStorage.getItem("theme")
-        ? localStorage.getItem("theme")
-        : null;
-
-      if (currentTheme) {
-        document.documentElement.setAttribute("data-theme", currentTheme);
-
-        if (currentTheme === "dark") {
-          toggleSwitch.checked = true;
-        }
-      }
-    </script>
   </body>
 </html>
