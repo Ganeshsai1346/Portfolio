@@ -80,9 +80,9 @@ p {
   font-weight: 300;
 }
 
-ul {
+/* ul {
   list-style: none;
-}
+} */
 
 a {
   text-decoration: none;
@@ -116,6 +116,7 @@ h4 {
 
 .navbar ul {
   display: flex;
+  list-style: none;
 }
 
 .navbar ul li a {
@@ -320,9 +321,24 @@ h4 {
   font-size: 3rem !important;
 }
 
+#experience {
+  padding: 2rem;
+}
+
+#experience ul {
+  padding-left: 1.7rem;
+}
+
+#experience h3 {
+  color: var(--primary-color);
+}
 /* Projects */
 #projects {
   padding: 2rem;
+}
+
+#projects ul {
+  list-style: none;
 }
 
 #projects .readmore {
