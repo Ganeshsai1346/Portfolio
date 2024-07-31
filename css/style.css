@@ -321,20 +321,17 @@ h4 {
   font-size: 3rem !important;
 }
 
-#experience {
-  padding: 2rem;
-}
-
 #experience ul {
   padding-left: 1.7rem;
 }
 
 #experience h3 {
   color: var(--primary-color);
+  padding-top: 1.5rem;
 }
 /* Projects */
 #projects {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 #projects ul {
